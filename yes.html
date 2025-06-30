@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yes Elevators</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link id="fontLink" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Raleway', sans-serif;
+    }
+
+    .elevator-car {
+      width: 100px;
+      height: 90px;
+      background: #5D3FD3;
+      border-radius: 10px;
+      position: absolute;
+      left: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 600;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: top 1.6s ease-in-out;
+    }
+
+    .form-floating {
+      position: relative;
+    }
+
+    .form-floating input,
+    .form-floating textarea {
+      width: 100%;
+      padding: 1.25rem 1rem 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+      outline: none;
+      transition: border 0.3s;
+    }
+
+    .form-floating label {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      background: white;
+      padding: 0 0.25rem;
+      color: #888;
+      font-size: 0.875rem;
+      pointer-events: none;
+      transition: all 0.2s;
+    }
+
+    .form-floating input:focus + label,
+    .form-floating input:not(:placeholder-shown) + label,
+    .form-floating textarea:focus + label,
+    .form-floating textarea:not(:placeholder-shown) + label {
+      top: 0.4rem;
+      font-size: 0.75rem;
+      color: #5D3FD3;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Navbar -->
+  <header class="sticky top-0 bg-white shadow z-50">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-purple-700">Yes Elevators</h1>
+      <nav class="space-x-6 hidden sm:block">
+        <a href="#about" class="hover:text-purple-700">About</a>
+        <a href="#services" class="hover:text-purple-700">Services</a>
+        <a href="#products" class="hover:text-purple-700">Products</a>
+        <a href="#contact" class="hover:text-purple-700">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero with Elevator -->
+  <section class="flex flex-col sm:flex-row items-center justify-between px-6 py-16 max-w-6xl mx-auto">
+    <div class="max-w-lg">
+      <h2 class="text-4xl font-bold text-purple-700 mb-4">Raising Standards. One Floor at a Time.</h2>
+      <p class="text-gray-600 mb-6">We provide safe, modern, and reliable elevator installation and maintenance services.</p>
+      <a href="#contact" class="bg-purple-700 text-white px-6 py-3 rounded-xl shadow hover:bg-purple-800 transition">Get in Touch</a>
+    </div>
+
+    <!-- Modern Elevator -->
+    <div class="w-full sm:w-1/2 mt-10 sm:mt-0 flex justify-center items-end">
+      <div class="shaft bg-gray-200 relative overflow-hidden rounded-xl border-2 border-gray-300" style="width: 120px; height: 318px;">
+        <div class="elevator-car" id="elevatorDisplay" style="top: 0">2</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="bg-gray-50 py-12">
+    <div class="max-w-4xl mx-auto text-center px-4">
+      <h3 class="text-2xl font-semibold text-purple-700 mb-4">About Us</h3>
+      <p class="text-gray-600">Yes Elevators is a trusted name in modern elevator solutions. We specialize in installations, maintenance, and consultations with a focus on safety and efficiency. Trusted by commercial and residential clients alike.</p>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-16 max-w-6xl mx-auto px-4">
+    <h3 class="text-2xl font-semibold text-center text-purple-700 mb-10">Our Services</h3>
+    <div class="grid sm:grid-cols-3 gap-6">
+      <div class="bg-white rounded-xl shadow p-6 text-center">
+        <h4 class="text-lg font-semibold mb-2">🛠 Installation</h4>
+        <p class="text-gray-600 text-sm">Customized elevator installations for buildings of all types.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow p-6 text-center">
+        <h4 class="text-lg font-semibold mb-2">🔧 Maintenance</h4>
+        <p class="text-gray-600 text-sm">24x7 maintenance and support for seamless operation.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow p-6 text-center">
+        <h4 class="text-lg font-semibold mb-2">📋 Consultation</h4>
+        <p class="text-gray-600 text-sm">Expert advice for elevator planning, upgrades, and safety audits.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section id="products" class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-2xl font-semibold text-center text-purple-700 mb-10">Our Products</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="bg-white h-48 rounded-xl shadow flex items-center justify-center text-gray-400">Image 1</div>
+        <div class="bg-white h-48 rounded-xl shadow flex items-center justify-center text-gray-400">Image 2</div>
+        <div class="bg-white h-48 rounded-xl shadow flex items-center justify-center text-gray-400">Image 3</div>
+        <div class="bg-white h-48 rounded-xl shadow flex items-center justify-center text-gray-400">Image 4</div>
+        <div class="bg-white h-48 rounded-xl shadow flex items-center justify-center text-gray-400">Image 5</div>
+        <div class="bg-white h-48 rounded-xl shadow flex items-center justify-center text-gray-400">Image 6</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="bg-gray-100 py-16">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h3 class="text-2xl font-semibold text-purple-700 mb-6">Let’s Elevate Together</h3>
+      <p class="mb-6 text-gray-600">Have a project in mind or need service? Contact us now!</p>
+      <div class="space-y-2 text-gray-700 mb-8">
+        <p>📞 +91-9876543210</p>
+        <p>✉️ contact@yeselevators.in</p>
+      </div>
+      <form class="bg-white shadow-2xl rounded-2xl p-8 max-w-xl mx-auto space-y-6">
+        <div class="form-floating">
+          <input type="text" name="name" placeholder=" " required class="peer" />
+          <label>Your Name</label>
+        </div>
+        <div class="form-floating">
+          <input type="email" name="email" placeholder=" " required class="peer" />
+          <label>Your Email</label>
+        </div>
+        <div class="form-floating">
+          <input type="text" name="phone" placeholder=" " class="peer" />
+          <label>Phone Number</label>
+        </div>
+        <div class="form-floating">
+          <textarea name="message" placeholder=" " rows="4" required class="peer"></textarea>
+          <label>Your Message</label>
+        </div>
+        <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-purple-800 text-white font-semibold py-3 rounded-xl hover:from-purple-700 hover:to-purple-900 transition shadow-md">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-sm text-gray-500 py-6 border-t">
+    © 2025 Yes Elevators. All rights reserved.
+  </footer>
+
+  <!-- Elevator Script -->
+  <script>
+    const car = document.getElementById('elevatorDisplay');
+    const tops = ['0px', '106px', '212px', '106px', '0px'];
+    const floors = ['2', '1', 'G', '1', '2'];
+    let i = 0;
+
+    function updateElevator() {
+      car.style.top = tops[i];
+      car.textContent = floors[i];
+      i = (i + 1) % floors.length;
+    }
+
+    updateElevator();
+    setInterval(updateElevator, 1800);
+  </script>
+
+</body>
+</html>
